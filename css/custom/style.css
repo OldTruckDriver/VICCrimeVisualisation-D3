@@ -1,0 +1,363 @@
+body {
+    font-family: "Helvetica Neue", sans-serif;
+}
+
+section > div {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+#FirstPageTitle {
+    font-family: "Helvetica Neue", sans-serif;
+    font-size: 28px;
+    color: black;
+    text-align: center;
+}
+
+#ThirdPageTitle {
+    font-family: "Helvetica Neue", sans-serif;
+    font-size: 28px;
+    color: black;
+    text-align: center;
+    top: 0;
+}
+
+.firstsection{
+    background-color: antiquewhite;
+    background-image: url("crime.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 20% 20%;
+    background-position: right top;
+
+}
+
+.secondsection{
+    background-image: url("map.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+
+}
+
+.thirdsection{
+    background-color: antiquewhite;
+    background-image: url("Happiness.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 80% 70%;
+    background-position: center;
+}
+.dropbtn {
+    font-family: "Comic Sans MS", sans-serif;
+    display: inline-block;
+    border-radius: 4px;
+    background-color: slategray;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 25px;
+    padding: 20px;
+    width: 200px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+    position: absolute;
+    left: -540px;
+    top: 0px;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.dropdown span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.dropdown:hover span {
+    padding-right: 25px;
+}
+
+.dropdown:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    left: -330px;
+    top: 10px;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+
+.button2tn {
+    font-family: "Comic Sans MS", sans-serif;
+    display: inline-block;
+    border-radius: 4px;
+    background-color: slategray;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 25px;
+    padding: 20px;
+    width: 200px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+    position: absolute;
+    left: -270px;
+    top: -550px;
+
+}
+
+.button2 {
+    position: relative;
+    display: inline-block;
+}
+
+.button2 span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.button2 span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.button2:hover span {
+    padding-right: 25px;
+}
+
+.button2:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+.button2-content {
+    display: none;
+    position: absolute;
+    left: -60px;
+    top: -540px;
+    background-color: #f9f9f9;
+    min-width: 300px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.button2-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.button2-content a:hover {background-color: #f1f1f1}
+
+.button3tn {
+    font-family: "Comic Sans MS", sans-serif;
+    display: inline-block;
+    border-radius: 4px;
+    background-color: slategray;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 25px;
+    padding: 20px;
+    width: 200px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+    position: absolute;
+    left: -100px;
+    top: -570px;
+
+}
+
+
+.button3 {
+    position: relative;
+    display: inline-block;
+}
+
+.button3 span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.button3 span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.button3:hover span {
+    padding-right: 25px;
+}
+
+.button3:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+.button3-content {
+    display: none;
+    position: absolute;
+    left: 110px;
+    top: -550px;
+    background-color: #f9f9f9;
+    min-width: 250px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.button3-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.button3-content a:hover {background-color: #f1f1f1}
+
+
+#section1MapLegend {
+    margin: 0 auto;
+    font-size: 12px;
+    width: 250px;
+}
+
+#section1Filters {
+    margin: 10px 5px;
+}
+
+.filterContainer {
+    margin: 10px 5px;
+    display: inline;
+}
+
+.filterContainer label {
+    margin-right: 5px;
+}
+
+.textTooltip {
+    position: absolute;
+    font-size: 12px;
+    pointer-events: none;
+    cursor: default;
+}
+
+.multilineTooltip {
+    line-height: 1;
+    padding: 6px;
+    background: wheat;
+    font-size: 12px;
+    transition: all 0.2s ease 0s;
+    position: absolute;
+    top: 100px;
+    left: 505px;
+    opacity: 0;
+}
+
+.multilineTooltipTooltip {
+    position:absolute;
+    background-color:lightgray;
+    padding:5px;
+    font-size: 12px;
+}
+
+#section1MapContainer svg, #section2ChartContainer svg {
+    display: inline;
+}
+
+#section2ChartContainer {
+    width: 1000px;
+}
+
+.slice {
+    cursor: pointer;
+    font-size: 11px;
+}
+
+.slice .main-arc {
+    stroke: #fff;
+    stroke-width: 1px;
+}
+
+.slice .hidden-arc {
+    fill: none;
+}
+
+.slice text {
+    pointer-events: none;
+    dominant-baseline: middle;
+    text-anchor: middle;
+}
+
+.bar {
+    fill: #5f89ad;
+}
+
+.axis {
+    font-size: 10px;
+}
+
+.axis path,
+.axis line {
+    fill: none;
+    display: none;
+}
+
+.label {
+    font-size: 10px;
+}
+
+.bar.negative {
+    fill: darkred;
+}
+
+.bar.positive {
+    fill: steelblue;
+}

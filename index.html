@@ -1,0 +1,167 @@
+<!--https://mofesolapaul.github.io/sectionizr/-->
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Victoria Crime</title>
+    <link href="https://fonts.googleapis.com/css?family=Bellefair" rel="stylesheet">
+    <link rel="stylesheet" href="css/sectionizr.css">
+    <link rel="stylesheet" href="css/style.css">
+
+
+    <link rel="stylesheet" href="css/custom/style.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-table.min.css">
+</head>
+<!--<style>-->
+<!--    .select,-->
+<!--    #locale {-->
+<!--        width: 100%;-->
+<!--    }-->
+
+<!--    .like {-->
+<!--        margin-right: 10px;-->
+<!--    }-->
+<!--</style>-->
+<body>
+<div class="sectionizr">
+    <div class="controls">
+        <a class="prev" onclick="controlla1.prev()"></a>
+        <a class="next" onclick="controlla1.next()"></a>
+    </div>
+
+    <section class="firstsection">
+
+        <div id="section2ChartContainer">
+            <svg id="section2Sunburst"></svg>
+            <svg id="section2BarChart"></svg>
+        </div>
+
+
+        <div class="dropdown">
+            <button class="dropbtn" style="vertical-align:middle" onclick="ButtonPage1()">
+                <span>Introduction </span>
+            </button>
+            <div class="dropdown-content" id="dropdown-content">
+                <a>1. The clickable Sunburst Chart shows the number of criminal incidents in a hierarchical way!</a>
+                <a>2. View details of Sunburst Chart by hovering on your interested area! </a>
+                <a>3. You can also manipulate the Sunburst Chart by the Bar Chart, because they are MATCHED!</a>
+            </div>
+        </div>
+        <h3 id="FirstPageTitle">General View of Crime In VIC</h3>
+    </section>
+
+    <section class="secondsection">
+        <div>
+            <div id="section1FilterWrapper"></div>
+            <div id="section1MapContainer">
+                <svg id="section1Map"></svg>
+                <svg id="section1MapLegend"></svg>
+            </div>
+            <div class="button2">
+                <button class="button2tn" style="vertical-align:middle" onclick="ButtonPage2()">
+                    <span>Introduction </span>
+                </button>
+                <div class="button2-content" id="button2-content">
+                    <a>The colour of this choropleth map shows the number of criminal incidents based on your choice</a>
+                    <a>The multiple line chart show the value of Z-score of the population of crime and unemployment
+                        among all LGAs in VIC</a>
+                    <a>1. The map is clickable! Try and you will find something interesting!</a>
+                    <a>2. As Z-score is used to discuss the population of unemployment and crime in multiple line
+                        charts, you can better view how the local situation is with the comparison of other LGAs! </a>
+                    <a>3. You can select the specific type of crime and year which you want to view!</a>
+                    <a>4. There is a "Start" button, and it can help you to view the changes of the may in a decade!</a>
+                </div>
+            </div>
+            <div>
+                <button type="button" id="start">start</button>
+                <input min="2010" max="2019" step="1" value="2010" id="range" type=range>
+                <input id="show" type="text"
+                       readonly="true"
+                       style="background-color:transparent;border:0;"
+                       disabled="disabled"
+                       value="2010"></div>
+        </div>
+    </section>
+    <section class="thirdsection">
+        <h3 id="ThirdPageTitle">More Predictors V.S. Crime for A Certain LGA</h3>
+        <div>
+            <div id="section3FilterWrapper"></div>
+            <div id="section3BarChart">
+                <svg></svg>
+            </div>
+            <div class="button3">
+                <button class="button3tn" style="vertical-align:middle" onclick="ButtonPage3()">
+                    <span>Introduction </span>
+                </button>
+                <div class="button3-content" id="button3-content">
+                    <a>1. Z score is calculated to know how these predictors and crime look like comparing with
+                        the average in VIC.</a>
+                    <a>2. All Predictors shown on the x axis which are on the left of “LUIndustrial” positively
+                        influence the value of crime in this bar chart and on the right of "MortgageStress" negatively
+                        affect the value of crime. For instance, if there are more people with the income below 400
+                        in Ararat, the bar of crime will rise up. </a>
+                    <a>3. You can choose the LGA you are interested in!</a>
+                    <a>***Let' s find reasons why the crime looks like it!***￿</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+</div>
+
+<script src="js/jquery-2.1.3.min.js"></script>
+<script src="https://unpkg.com/@glidejs/glide@3.3.0/dist/glide.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="https://d3js.org/d3.v4.js"></script>
+<script src="https://d3js.org/queue.v1.min.js"></script>
+<script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+<script src="js/d3-legend.min.js"></script>
+
+
+<script type="text/javascript" src="js/custom/section1.js"></script>
+<script type="text/javascript" src="js/custom/section2.js"></script>
+<script type="text/javascript" src="js/custom/section3.js"></script>
+<script type="text/javascript" src="js/custom/loader.js"></script>
+
+
+<script src="js/sectionizr.min.js"></script>
+
+<script>
+    function ButtonPage1() {
+        var x = document.getElementById("dropdown-content");
+        if (x.style.display === "none") {
+            x.style.display = "block";
+        } else {
+            x.style.display = "none";
+        }
+    }
+
+    function ButtonPage2() {
+        var x = document.getElementById("button2-content");
+        if (x.style.display === "none") {
+            x.style.display = "block";
+        } else {
+            x.style.display = "none";
+        }
+    }
+
+    function ButtonPage3() {
+        var x = document.getElementById("button3-content");
+        if (x.style.display === "none") {
+            x.style.display = "block";
+        } else {
+            x.style.display = "none";
+        }
+    }
+</script>
+<script>
+    // initialize sectionizr, keep a reference to the objects returned
+    var controlla1 = $('.sectionizr').sectionizr();
+
+
+</script>
+</body>
+</html>
